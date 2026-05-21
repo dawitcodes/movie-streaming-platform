@@ -1,0 +1,78 @@
+.footerContainer {
+  background-color: #141414; /* Netflix background dark grey/black */
+  color: #808080; /* Muted grey for links and text */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 50px 4% 30px 4%;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+}
+
+.footerContent {
+  width: 100%;
+  max-width: 980px; /* Aligns with standard Netflix web layouts */
+}
+
+/* Social Icons Styling */
+.socialIcons {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.socialIcons a {
+  color: #ffffff;
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+.socialIcons a:hover {
+  color: #b3b3b3;
+}
+
+/* Responsive Grid for Links */
+.linksGrid {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 40px;
+}
+
+.linkItem a {
+  color: #808080;
+  text-decoration: none;
+  transition: underline 0.1s ease;
+}
+
+.linkItem a:hover {
+  text-decoration: underline;
+}
+
+/* Copyright section */
+.copyright {
+  font-size: 11px;
+  margin-top: 20px;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Tablet view: 3 columns */
+@media (max-width: 740px) {
+  .linksGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 20px;
+  }
+}
+
+/* Mobile landscape view: 2 columns */
+@media (max-width: 500px) {
+  .linksGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .socialIcons {
+    gap: 20px;
+  }
+}
